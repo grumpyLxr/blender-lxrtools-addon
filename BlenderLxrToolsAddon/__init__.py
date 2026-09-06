@@ -1,6 +1,7 @@
 bl_info = {
     "name": "LxrTools",
     "description": "Recalculates normals outward for selected meshes, performs a BoolTool auto operation, and recalculates normals inward on the output.",
+    "doc_url": "https://github.com/grumpyLxr/blender-lxrtools-addon",
     "author": "grumpyLxr",
     "version": (1, 0, 0),
     "blender": (3, 5, 0),

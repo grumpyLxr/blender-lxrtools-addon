@@ -75,13 +75,13 @@ class OBJECT_OT_inverted_booltool(bpy.types.Operator):
         # 4. Execute corresponding BoolTool Auto Operation
         try:
             if self.operation == OPERATION_DIFF:
-                bpy.ops.object.boolean_auto_difference()
+                bpy.ops.object.boolean_auto_difference(use_hole_tolerant=True)
             elif self.operation == OPERATION_UNION:
-                bpy.ops.object.boolean_auto_union()
+                bpy.ops.object.boolean_auto_union(use_hole_tolerant=True)
             elif self.operation == OPERATION_INTERSECT:
-                bpy.ops.object.boolean_auto_intersect()
+                bpy.ops.object.boolean_auto_intersect(use_hole_tolerant=True)
             elif self.operation == OPERATION_SLICE:
-                bpy.ops.object.boolean_auto_slice()
+                bpy.ops.object.boolean_auto_slice(use_hole_tolerant=True)
         except Exception as e:
             log.error(self, "BoolTool Operation Failed: {}", str(e))
             return {'CANCELLED'}
