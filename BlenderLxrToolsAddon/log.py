@@ -5,6 +5,8 @@ from . import bl_info
 def warn(op: Operator, msg: str, *args) -> None:
     op.report({"WARNING"}, msg.format(*args))
 
+def error(op: Operator, msg: str, *args) -> None:
+    op.report({"ERROR"}, msg.format(*args))
 
 def log(msg: str, *args) -> None:
     print("\U0001f9f0", "{}:".format(bl_info["name"]), msg.format(*args))
